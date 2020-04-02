@@ -1,0 +1,56 @@
+/**
+* Creating table for publishers with a primary key containing publisher_name
+*/
+CREATE TABLE Publishers (
+    --The publisher name
+    publisher_name VARCHAR(50) NOT NULL,
+    --The publisher address
+    publisher_address VARCHAR(50),
+    --The publisher phone
+    publisher_phone VARCHAR(50),
+    --The publisher email
+    publisher_email VARCHAR(50),
+    --The primary key is the publisher name
+    CONSTRAINT publishers_pk PRIMARY KEY (publisher_name)
+);
+/**
+* Creating a table for writing groups with a primary key containing the group name
+*/
+CREATE TABLE WritingGroups (
+    --The name of the group, cannot be empty
+    group_name VARCHAR(50) NOT NULL,
+    --The head writer of the group
+    head_writer VARCHAR(50),
+    --The year the group is formed
+    year_formed VARCHAR(4),
+    --The subject that the group specializes in
+    subject VARCHAR(20),
+    --The primary key which is the group name
+    CONSTRAINT writing_groups_pk PRIMARY KEY (group_name)
+);
+
+/**
+* Creating a table for books with primary key containing the group name and book title
+* a foreign key that references publishers by name
+* and a foreign key that references writing groups by group name
+*/
+CREATE TABLE Books (
+    --The name of the group associated with the book
+    group_name VARCHAR(50) NOT NULL,
+    --The title of the book
+    book_title VARCHAR(50) NOT NULL,
+    --The name of the publisher of the book
+    publisher_name VARCHAR(50) NOT NULL,
+    --The year the book was published
+    year_published VARCHAR(4),
+    --The number of pages the book has
+    number_pages VARCHAR(20),
+    --The primary key of the book which consist of the group name and book title
+    CONSTRAINT books_pk PRIMARY KEY (group_name, book_title),
+    --The foreign key that references publishers name
+    CONSTRAINT books_publishers_fk FOREIGN KEY (publisher_name)
+        REFERENCES publishers (publisher_name),
+    --The foreign key that references group name
+    CONSTRAINT books_writing_groups_fk FOREIGN KEY (group_name)
+        REFERENCES WritingGroups (group_name)
+);

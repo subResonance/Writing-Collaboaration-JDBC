@@ -1,0 +1,33 @@
+/**
+* Inserts data into publishers table
+*/
+INSERT INTO Publishers
+VALUES ('Penguin Random House', '123 Penguine Way', '714-555-1234', 'penguinrh@gmail.com'),
+    ('Hachette Livre', '1124 Brookhurst St', '714-555-9876', 'hachettel@gmail.com'),
+    ('HarperCollins', '7897 Magic Way', '626-623-6234', 'hcollins@gmail.com'),
+    ('Macmillan Publishers', '5152 Hollywood blvd', '542-555-1924', 'mcmpub@hotmail.com'),
+    ('Simon & Schuster', '9000 Washington rd', '423-123-2000', 'sandspub@gmail.com'),
+    ('McGraw-Hill Edu', '5124 S Curtis St', '323-555-6223', 'mchilledu@gmail.com');
+/**
+* Inserts data into Writing groups table
+*/
+INSERT INTO WritingGroups
+VALUES ('South Bay Creatives', 'John Doe', '2010', 'Non-fiction'),
+    ('Above and Beyond', 'Jeremy Hill', '1889', 'Fiction'),
+    ('Coffee House Writers', 'Sam Hank', '1995', 'Science Fiction'),
+    ('Los Angeles Writers', 'Mary Jane', '2019', 'Educational'),
+    ('OC Writers Guild', 'Josh Peck', '2005', 'Non-Fiction'),
+    ('LB Playwrites', 'Lisa An', '1998', 'Theatre'),
+    ('Mystery Inc. Writers', 'Fred Jones', '2000', 'Mystery'),
+    ('Publishing Pushers', 'Scooby Doo', '1998', 'English');
+/**
+* Inserts data into Books table
+*/
+INSERT INTO Books
+VALUES ('Above and Beyond', 'Alice in Wonderland', 'Penguin Random House', '1998', '500'),
+    ('OC Writers Guild', 'Mystery of Anna Mae', 'Simon & Schuster', '2010', '430'),
+    ('Publishing Pushers', 'SAT Practice 2020', 'McGraw-Hill Edu', '2020', '769'),
+    ('Los Angeles Writers', 'Fundamental Calc I', 'McGraw-Hill Edu', '2001', '690'),
+    ('Coffee House Writers', 'March of Penguins', 'Penguin Random House', '1998', '225'),
+    ('LB Playwrites', 'In time', 'HarperCollins', '2000', '101'),
+    ('Above and Beyond', 'Peter Pan and NeverLand', 'Simon & Schuster', '1993', '520');
